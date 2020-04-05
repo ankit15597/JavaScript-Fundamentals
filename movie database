@@ -1,0 +1,37 @@
+// Below code creates a movie database using an array of objects.
+
+var movies = [ 
+    {title: "3 Idiots", rating: 5, hasWatched: true},
+    {title: "YJHD", rating: 4, hasWatched: true},
+    {title: "Inception", rating: 5, hasWatched: true},
+    {title: "Gone girl", rating: 4, hasWatched: false},
+    {title: "The Sky is Pink", rating: 3.5, hasWatched: false}
+    ]
+  
+// Below code accesses and prints the respective values(Using For loop).
+
+for (var i =0 ; i<movies.length; i++){
+    if(movies[i].hasWatched == true)
+    {console.log("You have watched" + movies[i].title + " - " + movies[i].rating);}
+    else
+    {console.log("You have Not Seen" + movies[i].title + " - " + movies[i].rating);}
+}
+
+// Using ForEach Loop
+
+movies.forEach(
+    function(el)
+    {
+        var result;
+        if(el.hasWatched)
+        {
+            result = "He has watched ";
+        }
+        else
+        {
+            result = "He has not watched ";
+        }
+        result = result + el.title + " " + el.rating;
+        console.log(result);
+    })
+  
