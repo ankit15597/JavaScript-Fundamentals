@@ -33,5 +33,6 @@ movies.forEach(
         }
         result = result + el.title + " " + el.rating;
         console.log(result);
-    })
+    }
+    )
   
